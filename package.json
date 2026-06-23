@@ -1,0 +1,42 @@
+{
+  "name": "backend-2",
+  "version": "2.0.0",
+  "description": "Backend para el curso de backend-2",
+  "homepage": "https://github.com/Nestor22-rgb/BACKEND-2#readme",
+  "bugs": {
+    "url": "https://github.com/Nestor22-rgb/BACKEND-2/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Nestor22-rgb/BACKEND-2.git"
+  },
+  "main": "app.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js",
+    "dev": "nodemon app.js"
+  },
+  "dependencies": {
+    "bcrypt": "6.0.0",
+    "connect-mongo": "6.0.0",
+    "cookie-parser": "1.4.7",
+    "dotenv": "17.2.4",
+    "express": "5.2.1",
+    "express-session": "1.19.0",
+    "jsonwebtoken": "9.0.3",
+    "mongoose": "9.1.5",
+    "passport": "0.7.0",
+    "passport-jwt": "4.0.1",
+    "passport-local": "1.0.0",
+    "express-handlebars": "9.0.1",
+    "twilio": "5.10.0",
+    "nodemailer": "8.0.1",
+    "handlebars": "4.7.8"
+  },
+  "devDependencies": {
+    "nodemon": "3.1.11"
+  },
+  "author": "Nestor Ledesma",
+  "license": "MIT"
+}
