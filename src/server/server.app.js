@@ -18,8 +18,13 @@ import path from 'path';
 import { fileURLToPath } from 'url';
 import { hbsHelpers } from './hbs.helpers.js';
 
+import cluster, { isPrimary } from 'cluster';
+import { cpus } from 'os';
+
+import { setupSwagger } from '../docs/swagger.js';
+
 const app = express();
-const PORT = environment.PORT || 8000;
+const PORT = environment.PORT || 4000;
 const SECRET_SESSION = environment.SECRET_SESSION || "clave_secreta";
 
 app.use(express.json());
@@ -75,6 +80,13 @@ export const startServer = async () => {
 
     // Inicializar todos los enrutadores
     initRouters(app)
+
+    setupSwagger(app);
+
+        // Enrutador para manejar error 404.
+    app.use((req, res) => {
+        res.status(404).json({ error: "Page not found." })
+    })
 
         // Manejo de señales y errores globales
     process.on('unhandledRejection', (reason) => {

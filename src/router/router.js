@@ -31,9 +31,5 @@ export function initRouters(app) {
     // Enrutador de Emails
     app.use('/', emailRouter);
 
-    // Enrutador para manejar error 404.
-    app.use((req, res) => {
-        res.status(404).json({ error: "Page not found." })
-    })
 
 }

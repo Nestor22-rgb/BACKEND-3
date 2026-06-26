@@ -1,0 +1,82 @@
+paths:
+  /auth/register:
+    post:
+      summary: Registrar un nuevo usuario
+      tags:
+        - User
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/User"
+      responses:
+        "201":
+          description: Usuario registrado con éxito.
+        "400":
+          description: Datos inválidos o usuario ya registrado.
+        "500":
+          description: Error interno del servidor.
+          
+  /auth/login:
+    post:
+      summary: Login de usuario
+      tags:
+        - User
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+                - email
+                - password
+              properties:
+                email:
+                  type: string
+                  example: test@gmail.com
+                password:
+                  type: string
+                  example: 123456
+      responses:
+        "200":
+          description: Login exitoso
+        "400":
+          description: Credenciales incorrectas o datos faltantes
+        "500":
+          description: Error interno del servidor
+
+  /auth/logaut:
+    post:
+      summary: Cerrar sesión del usuario
+      tags:
+        - User
+      responses:
+        "200":
+          description: Logout exitoso
+        "500":
+          description: Error al cerrar sesión
+  
+  /auth:
+    get:
+      summary: Obtener todos los usuarios
+      tags:
+        - User
+      responses:
+        "200":
+          description: Lista de usuarios obtenida correctamente
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  users:
+                    type: array
+                    items:
+                      $ref: "#/components/schemas/User"
+        "401":
+          description: No autorizado (no hay sesión activa)
+        "500":
+          description: Error interno del servidor
+
