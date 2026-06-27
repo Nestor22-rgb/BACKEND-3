@@ -13,7 +13,7 @@ import emailRouter from './routes/mailer.router.js';
 export function initRouters(app) {
     app.use('/', homeRouter);
     app.use('/student', studentRouter);
-    app.use('/auth', userRouter);
+    app.use('/api/users', userRouter);
     app.use('/auth/me', profileRouter);
     app.use('/api/auth', authRouter);
     app.use('/api/auth-jwt', authJwtRouter);

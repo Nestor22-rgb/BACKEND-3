@@ -1,4 +1,4 @@
-Backend 2
+Backend 3
 
 Proyecto académico desarrollado para la cursada de Backend 2, implementado con Node.js, Express, MongoDB, Handlebars, Passport, JWT, Sessions, Nodemailer y Twilio.
 
@@ -10,22 +10,25 @@ Router → Controller → Service → DAO → Model
 
 Índice
 
-- "Descripción del proyecto" (#descripción-del-proyecto)
-- "Tecnologías utilizadas" (#tecnologías-utilizadas)
-- "Arquitectura general" (#arquitectura-general)
-- "Estructura del proyecto" (#estructura-del-proyecto)
-- "Configuración del entorno" (#configuración-del-entorno)
-- "Instalación y ejecución" (#instalación-y-ejecución)
-- "Funcionalidades principales" (#funcionalidades-principales)
-- "Sistema de autenticación" (#sistema-de-autenticación)
-- "Módulo de órdenes" (#módulo-de-órdenes)
-- "Módulo de mensajería" (#módulo-de-mensajería)
-- "Módulo de mailer" (#módulo-de-mailer)
-- "Render de vistas con Handlebars" (#render-de-vistas-con-handlebars)
-- "Rutas principales" (#rutas-principales)
-- "Flujos del sistema" (#flujos-del-sistema)
-- "Scripts disponibles" (#scripts-disponibles)
-- "Autor" (#autor)
+- "Descripción del proyecto" 
+- "Tecnologías utilizadas" 
+- "Arquitectura general" 
+- "Estructura del proyecto" 
+- "Configuración del entorno" 
+- "Instalación y ejecución" 
+- "Funcionalidades principales" 
+- "Sistema de autenticación" 
+- "Módulo de órdenes" 
+- "Módulo de mensajería"
+- "Módulo de mailer" 
+- "Render de vistas con Handlebars" 
+- "Rutas principales" 
+- "Flujos del sistema" 
+- "Scripts disponibles" 
+- "Autor" 
+- "Testing"
+- "Docker"
+- "Deploy en Render"
 
 ---
 
@@ -74,6 +77,10 @@ Vistas
 
 - express-handlebars
 - handlebars
+
+Testing 
+- Jest
+- Supertest
 
 Comunicación
 
@@ -663,7 +670,7 @@ Proyecto funcional para entrega académica de Backend 2, incluyendo:
 Autor
 
 Nestor Ledesma
-Proyecto académico desarrollado para la cursada de Backend 2.
+Proyecto académico desarrollado para la cursada de Backend 3.
 
 GitHub:
-https://github.com/Nestor22-rgb/BACKEND-2
+https://github.com/Nestor22-rgb/BACKEND-3
