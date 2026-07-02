@@ -2,7 +2,7 @@ import dotenv from 'dotenv';
 dotenv.config();
 
 const env = {
-    NODE_ENV: process.env.NODE_ENV || 'development',
+    NODE_ENV: process.env.NODE_ENV || 'production',
     PORT: parseInt(process.env.PORT || '8080', 10),
     MONGO_TARGET: process.env.MONGO_TARGET || 'LOCAL',
     MONGO_URL: process.env.MONGO_URL || '',
